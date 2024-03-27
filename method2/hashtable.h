@@ -7,8 +7,8 @@ typedef struct production {
 #define BUCKET_SIZE 52 // 假设哈希表的大小为26，即非终结符的个数
 #define MAX_LENGTH 10 // 假设产生式右部的最大长度为10
 
-production* hash_table[BUCKET_SIZE]; // 哈希表是一个指向产生式的指针数组
-production* M[52][10]; // LL1分析表
+extern production* hash_table[BUCKET_SIZE]; // 哈希表是一个指向产生式的指针数组
+extern production* M[52][10]; // LL1分析表
 int hash(char c); // 哈希函数定义
 void init_hash_table(); // 初始化哈希表，将所有指针设为NULL
 void insert_production(char left, char* right); // 插入一个产生式到哈希表中，如果已经存在，则忽略

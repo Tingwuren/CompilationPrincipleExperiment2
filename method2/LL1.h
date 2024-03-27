@@ -1,12 +1,12 @@
 void read_into_grammar(); // 将文法读入哈希表
 int has_direct_left_recursion(); // 判断一个文法是否含有直接左递归
 void remove_direct_left_recursion(); // 消除一个文法的直接左递归
-char FIRST[52][10]; //
+extern char FIRST[52][10];
 void compute_first(); // 计算文法的FIRST集合
 void print_first(); //打印FIRST集合
 void init_first();
 void get_first(char symbol, char toadd);
-char FOLLOW[52][10];
+extern char FOLLOW[52][10];
 void compute_follow();
 void get_follow(char symbol, char toadd);
 void add_first_to_follow(char symbol, char toadd);

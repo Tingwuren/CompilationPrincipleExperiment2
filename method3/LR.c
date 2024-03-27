@@ -6,7 +6,9 @@
 #include "LR.h"
 #include "lex.h"
 
-
+struct State state[16];
+char s[100]; // 存储从输入文件中读入的字符串
+char token[100]; // 存储词法分析的符号表
 // DFA转换表
 int go[NUM_STATES][NUM_INPUTS] = {
     //  +             -           *           /           (           )          num          $           E           T           F

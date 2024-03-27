@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "lex.h"
+
+
 void lexical_analysis() {
     // 读入输入文件input.txt，将字符串存储在s中
     FILE *fp; // 文件指针

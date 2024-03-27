@@ -5,6 +5,12 @@
 #include "hashtable.h"
 #include "lex.h"
 
+char s[100]; // 存储从输入文件中读入的字符串
+char token[100]; // 存储词法分析的符号表
+production* hash_table[BUCKET_SIZE]; // 哈希表是一个指向产生式的指针数组
+production* M[52][10]; // LL1分析表
+char FIRST[52][10];
+char FOLLOW[52][10];
 
 int main(){
     // 读入文法

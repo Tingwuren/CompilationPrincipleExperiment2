@@ -34,7 +34,7 @@ struct State {
     int numItems;
 };
 
-struct State state[16];
+extern struct State state[16];
 // 输入字符
 enum Input {
     INPUT_PLUS,
